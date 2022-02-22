@@ -1,0 +1,19 @@
+{% capture src %}
+{{ "/assets/img/" | append: include.file | relative_url }}
+{% endcapture %}
+{% if jekyll.environment == "production" %}
+<figure>
+    <img
+      alt="{{ include.alt }}"
+      src="{{src}}"
+      srcset=""
+      />
+</figure>
+{% else %}
+<figure>
+    <img
+      alt="{{ include.alt }}"
+      src="{{src}}"
+      />
+</figure>
+{% endif %}

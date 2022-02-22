@@ -1,0 +1,30 @@
+title: "Frutas de diseño"
+author: "El vivero"
+description: ""
+url: "https://elvivero.es/"
+baseurl: "/frutas"
+lang: "es"
+
+sass:
+  style: expanded
+  sourcemap: development
+
+thumbor:
+  url: ""
+
+plugins: 
+  - jekyll-minifier
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+permalink: /:title/
+exclude: 
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - default.nix
+  - gemset.nix
+  - readme.md
+  - Makefile
+  - result
+  - flake.*
