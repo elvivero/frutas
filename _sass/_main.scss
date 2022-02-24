@@ -24,7 +24,10 @@ p {
     font-size: $font-base;
 }
 
-
+img {
+    max-width: 100%;
+    height: auto;
+}
 
 // top navbar
 header {

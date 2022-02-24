@@ -71,6 +71,16 @@
     };
     version = "2.7.0";
   };
+  fastimage = {
+    groups = ["default"];
+    platforms = [];
+    source = {
+      remotes = ["https://rubygems.org"];
+      sha256 = "0nnggg20za5vamdpkgrxxa32z33d8hf0g2bciswkhqnc6amb3yjr";
+      type = "gem";
+    };
+    version = "2.2.6";
+  };
   ffi = {
     groups = ["default" "jekyll_plugins"];
     platforms = [];
@@ -132,6 +142,17 @@
       type = "gem";
     };
     version = "4.2.0";
+  };
+  jekyll-image-size = {
+    dependencies = ["fastimage" "jekyll"];
+    groups = ["default"];
+    platforms = [];
+    source = {
+      remotes = ["https://rubygems.org"];
+      sha256 = "0c379nm5w0bpsqczam3ka43yq3n3har37akzf0kzvcwpb9k4qpw0";
+      type = "gem";
+    };
+    version = "1.2.1";
   };
   jekyll-minifier = {
     dependencies = ["cssminify2" "htmlcompressor" "jekyll" "json-minify" "uglifier"];
