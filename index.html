@@ -3,7 +3,16 @@ layout: default
 title: "Frutas de diseño"
 ---
 
-<h1 class="bg-red-100">{{ page.title }}</h1>
+<header>
+    <nav>
+        <ul>
+            <li><h1><a href="/">El vivero</a></h1></li>
+            <li><a href="/info">Info</a></li>
+            <li><h2>{{ page.title }}</h2></li>
+        </ul>
+    </nav>
+</header>
+
 {% include image.html file="Frutas de diseno01.jpg" alt="lalal" %}
 {% include image.html file="Frutas de diseno02.jpg" alt="lalal" %}
 {% include image.html file="Frutas de diseno03.jpg" alt="lalal" %}

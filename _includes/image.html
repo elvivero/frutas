@@ -1,8 +1,8 @@
 {% capture src %}{{ "/assets/img/" | append: include.file }}{% endcapture %}
 {% if jekyll.environment == "production" %}
 <img
-  src="{{ src | relative_url }}"
-  srcset="{{ src | absolute_url | thumbor_srcset }}"
+  src="{{ src | absolute_url}}"
+  srcset="{{ src_abs | thumbor_srcset }}"
   alt="{{ include.alt }}"
   />
 {% else %}
