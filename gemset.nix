@@ -177,17 +177,6 @@
     };
     version = "1.4.0";
   };
-  jekyll-thumbor = {
-    dependencies = ["ruby-thumbor"];
-    groups = ["default"];
-    platforms = [];
-    source = {
-      remotes = ["https://rubygems.org"];
-      sha256 = "14bj43p72h8ph80cc1sziywhfr4sq6pwqaf7f1xy82wcw53wy42m";
-      type = "gem";
-    };
-    version = "0.4.2";
-  };
   jekyll-watch = {
     dependencies = ["listen"];
     groups = ["default" "jekyll_plugins"];

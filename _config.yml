@@ -1,7 +1,7 @@
 title: "Frutas de diseño"
 author: "El vivero"
 description: ""
-url: "https://elvivero.es/"
+url: "https://elvivero.es"
 baseurl: "/frutas"
 lang: "es"
 
@@ -10,7 +10,17 @@ sass:
   sourcemap: development
 
 thumbor:
-  url: ""
+  url: "https://img.haztecaso.com"
+  key: "KFV^znjSZjp&Fo&D552!T8U#44Rfvdow"
+  sizes:
+    - 100
+    - 200
+    - 300
+    - 400
+    - 800
+    - 1200
+    - 1800
+    - 2048
 
 plugins: 
   - jekyll-minifier

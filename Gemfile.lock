@@ -44,8 +44,6 @@ GEM
       jekyll (>= 3.8, < 5.0)
     jekyll-sitemap (1.4.0)
       jekyll (>= 3.7, < 5.0)
-    jekyll-thumbor (0.4.2)
-      ruby-thumbor
     jekyll-watch (2.2.1)
       listen (~> 3.0)
     json (2.4.1)
@@ -86,7 +84,7 @@ DEPENDENCIES
   jekyll-minifier
   jekyll-seo-tag
   jekyll-sitemap
-  jekyll-thumbor
+  ruby-thumbor
 
 BUNDLED WITH
    2.2.24
