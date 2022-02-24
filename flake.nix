@@ -55,7 +55,7 @@
     defaultApp = apps.serve;
 
     devShell = pkgs.mkShell {
-      nativeBuildInputs = with pkgs; [ jekyll_env bundler ruby ];
+      nativeBuildInputs = with pkgs; [ jekyll_env bundler ruby nodejs ];
       shellHook = ''
       '';
     };
