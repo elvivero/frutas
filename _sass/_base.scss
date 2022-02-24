@@ -1,0 +1,30 @@
+$sm: 640px;
+$md: 768px;
+$lg: 1024px;
+$xl: 1280px;
+$xxl: 1420px;
+
+$s1:  5px;
+$s2:  10px;
+$s3:  15px;
+$s4:  20px;
+$s5:  25px;
+$s6:  30px;
+$s7:  35px;
+$s8:  40px;
+$s10: 50px;
+
+$font-xxs:  .625rem;
+$font-xs:   .75rem;
+$font-sm:   .875rem;
+$font-base: 1rem;
+$font-lg:   1.125rem;
+$font-xl:   1.25rem;
+$font-xxl:  1.5rem;
+$font-xxxl: 1.875rem;
+
+$color-primary: #282828;
+$color-bg: white;
+
+@mixin mx-auto { margin-right: auto; margin-left: auto; }
+@mixin my-auto { margin-top: auto; margin-bottom: auto; }
