@@ -22,15 +22,6 @@ a:hover {
     background-color: $color-primary;
 }
 
-p {
-    font-size: $font-base;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
 button {
     border: none;
     background: none;
@@ -69,6 +60,22 @@ main {
     background: $color-bg;
     max-width: $lg;
     padding: 0 $s4;
+    p {
+        font-size: $font-base;
+        margin-top: 0;
+        margin-bottom: .8rem;
+        &:not(:first-child) {
+            text-indent: $s4;
+        }
+    }
+    h3 {
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
 }
 
 .grid {
@@ -76,8 +83,22 @@ main {
     gap: $s4;
 }
 
-@each $n in 1,2,3,4,5 {
-    .cols-#{$n} {
-        grid-template-columns: repeat($n, 1fr);
-    }
+.cols-2 {
+   grid-template-columns: 1fr 1fr;
+}
+
+.cols-3 {
+   grid-template-columns: 1fr 1fr 1fr;
+}
+
+.cols-4 {
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   @media screen and (max-width: $lg) {
+    grid-template-columns: 1fr 1fr;
+   }
+}
+.cols-2, .cols-3, .cols-4 {
+   @media screen and (max-width: $sm) {
+    grid-template-columns: 1fr;
+   }
 }

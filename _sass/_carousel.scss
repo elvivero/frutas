@@ -9,6 +9,9 @@
                     display:block;
                 }
             } 
+            @media screen and (max-width: $lg) {
+                margin-bottom: $s3;
+            } 
         }
     }
     & > .controls {
@@ -21,11 +24,6 @@
         }
         & > * {
             display: inline-block;
-        }
-        & > .selectors > .selector {
-            width: $s2;
-            height: $s2;
-            background-color: $color-primary;
         }
     }
 }
