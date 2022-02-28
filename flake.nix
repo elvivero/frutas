@@ -33,6 +33,9 @@
     serve = pkgs.writeShellScriptBin "serve" ''
       ${pkgs.jekyll_env}/bin/bundle exec jekyll serve --watch --incremental --livereload
     '';
+    serve-prod = pkgs.writeShellScriptBin "serve-prod" ''
+      JEKYLL_ENV=production ${pkgs.jekyll_env}/bin/bundle exec jekyll serve --watch --incremental --livereload
+    '';
     push = pkgs.writeShellScriptBin "push" ''
       ${pkgs.rsync}/bin/rsync -aPv ${pkgs.website}/www/ lambda:/var/www/elvivero.es/frutas
     '';
@@ -45,6 +48,11 @@
     apps.serve = {
       type = "app";
       program = "${serve}/bin/serve";
+    };
+
+    apps.serve-prod = {
+      type = "app";
+      program = "${serve-prod}/bin/serve-prod";
     };
 
     apps.push = {

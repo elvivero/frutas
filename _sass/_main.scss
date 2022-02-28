@@ -97,6 +97,7 @@ main {
     grid-template-columns: 1fr 1fr;
    }
 }
+
 .cols-2, .cols-3, .cols-4 {
    @media screen and (max-width: $sm) {
     grid-template-columns: 1fr;
