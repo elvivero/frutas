@@ -1,0 +1,32 @@
+@import "base";
+
+.carousel {
+    & > .slides {
+        & > .slide {
+            @media screen and (min-width: $lg) {
+                display:none;
+                &.active {
+                    display:block;
+                }
+            } 
+        }
+    }
+    & > .controls {
+        display:none;
+        @media screen and (min-width: $lg) {
+            display: block;
+        }
+        button {
+            cursor:pointer;
+        }
+        & > * {
+            display: inline-block;
+        }
+        & > .selectors > .selector {
+            width: $s2;
+            height: $s2;
+            background-color: $color-primary;
+        }
+    }
+}
+

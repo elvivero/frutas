@@ -5,11 +5,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
         <title>{{ page.title }}</title>
         <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}" />
+        {% if page.carousel %}
+        <link rel="stylesheet" href="{{ '/assets/carousel.css' | relative_url }}" />
+        {% endif %}
     </head>
     <body>
         {% include header.html %}
         <main>
             {{ content }}
         </main>
+        {% if page.carousel %}
+        <script src="{{ '/assets/carousel.js' | relative_url }}" defer></script>
+        {% endif %}
     </body>
 </html>

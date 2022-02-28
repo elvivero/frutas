@@ -5,14 +5,13 @@
   srcset="{{ src | absolute_url | thumbor_srcset }}"
   alt="{{ include.alt }}"
   {% imagesize src:props %}
-  {% if include.lazy %}
-  loading="lazy"
-  {% endif %}
+  {% if include.lazy %}loading="lazy"{% endif %}
   />
 {% else %}
 <img
   src="{{ src | relative_url }}"
   alt="{{ include.alt }}"
   {% imagesize src:props %}
+  {% if include.lazy %}loading="lazy"{% endif %}
   />
 {% endif %}

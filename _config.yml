@@ -28,6 +28,10 @@ plugins:
   - jekyll-sitemap
   - jekyll-image-size
 
+jekyll-minifier:
+  uglifier_args:
+    harmony: true
+
 permalink: /:title/
 exclude: 
   - README.md

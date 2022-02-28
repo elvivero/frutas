@@ -1,6 +1,12 @@
 ---
 layout: default
 title: "Frutas de diseño"
+carousel:
+  - Frutas de diseno16.jpg 
+  - Frutas de diseno17.jpg 
+  - Frutas de diseno18.jpg 
+  - Frutas de diseno19.jpg 
+  - Frutas de diseno21.jpg 
 ---
 
 <div class="grid cols-2">
@@ -31,11 +37,11 @@ title: "Frutas de diseño"
   </div>
 </div>
 
-{% include image.html file="Frutas de diseno16.jpg" alt="lalal" %}
+{% include carousel.html images=page.carousel alt="carousel alt" %}
 
 <section>
     <h3>Papeles de seda (selección)<h3>
-    <div class="grid cols-2">
+    <div class="grid cols-4">
         {% include image.html file="Frutas de diseno01.jpg" alt="lalal" %}
         {% include image.html file="Frutas de diseno02.jpg" alt="lalal" %}
         {% include image.html file="Frutas de diseno03.jpg" alt="lalal" lazy=true %}
@@ -56,10 +62,6 @@ title: "Frutas de diseño"
     {% include image.html file="Frutas de diseno13.jpg" alt="lalal" lazy=true %}
     {% include image.html file="Frutas de diseno14.jpg" alt="lalal" lazy=true %}
     {% include image.html file="Frutas de diseno15.jpg" alt="lalal" lazy=true %}
-    {% include image.html file="Frutas de diseno17.jpg" alt="lalal" lazy=true %}
-    {% include image.html file="Frutas de diseno18.jpg" alt="lalal" lazy=true %}
-    {% include image.html file="Frutas de diseno19.jpg" alt="lalal" lazy=true %}
-    {% include image.html file="Frutas de diseno21.jpg" alt="lalal" lazy=true %}
 </section>
 <section>
     <h3>Etiquetas de frutas<h3>
