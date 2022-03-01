@@ -31,12 +31,15 @@
   let
     pkgs = import nixpkgs { inherit system; overlays = [self.overlay]; }; 
     serve = pkgs.writeShellScriptBin "serve" ''
+      export PATH="${pkgs.nodejs}/bin:$PATH"
       ${pkgs.jekyll_env}/bin/bundle exec jekyll serve --watch --incremental --livereload
     '';
     serve-prod = pkgs.writeShellScriptBin "serve-prod" ''
+      export PATH="${pkgs.nodejs}/bin:$PATH"
       JEKYLL_ENV=production ${pkgs.jekyll_env}/bin/bundle exec jekyll serve --watch --incremental --livereload
     '';
     push = pkgs.writeShellScriptBin "push" ''
+      export PATH="${pkgs.nodejs}/bin:$PATH"
       ${pkgs.rsync}/bin/rsync -aPv ${pkgs.website}/www/ lambda:/var/www/elvivero.es/frutas
     '';
   in
