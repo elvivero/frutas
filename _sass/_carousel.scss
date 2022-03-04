@@ -1,6 +1,7 @@
 @import "base";
 
 .carousel {
+    margin-bottom: $s2;
     & > .slides {
         & > .slide {
             @media screen and (min-width: $lg) {
