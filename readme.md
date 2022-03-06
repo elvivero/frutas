@@ -1,5 +1,11 @@
 # Frutas de diseño
 
+## To do
+
+- Carousel: flechas
+- Video etiqutas
+- Logos 
+
 ## Update dependencies (gems)
 
 ```bash

@@ -13,12 +13,15 @@ thumbor:
   url: "https://img.haztecaso.com"
   key: "KFV^znjSZjp&Fo&D552!T8U#44Rfvdow"
   sizes:
-    - 100
     - 200
     - 300
-    - 400
-    - 800
-    - 1200
+    - 440
+    - 600
+    - 728
+    - 984 
+    - 1240
+    - 1380
+    - 1560
     - 1800
     - 2048
 

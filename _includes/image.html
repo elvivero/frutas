@@ -1,9 +1,10 @@
 {% capture src %}{{ "/assets/img/" | append: include.file }}{% endcapture %}
 {% if jekyll.environment == "production" %}
 <img
+  alt="{{ include.alt }}"
   src="{{ src | absolute_url }}"
   srcset="{{ src | absolute_url | thumbor_srcset }}"
-  alt="{{ include.alt }}"
+  sizes="(min-width: 1420px) 1380px, calc(100vw - 40px)"
   {% imagesize src:props %}
   {% if include.lazy %}loading="lazy"{% endif %}
   />
