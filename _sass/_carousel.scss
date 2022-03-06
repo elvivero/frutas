@@ -2,6 +2,7 @@
 
 .carousel {
     margin-bottom: $s2;
+    position: relative;
     & > .slides {
         & > .slide {
             @media screen and (min-width: $lg) {
@@ -15,16 +16,34 @@
             } 
         }
     }
-    & > .controls {
-        display:none;
+
+    button {
+        display: none;
+        cursor:pointer;
+        position: absolute;
+        top:0;
+        height: 100%;
+        width: 47%;
+        background-repeat: no-repeat;
         @media screen and (min-width: $lg) {
             display: block;
         }
-        button {
-            cursor:pointer;
+        &.prev {
+            left:0;
+            &:hover{
+            background-image: url( /frutas/assets/icons/left.svg );
         }
-        & > * {
-            display: inline-block;
+            background-position: 3% center;
+            background-size: 5%;
+        }
+        &.next {
+            right:0;
+            &:hover{
+            background-image: url( /frutas/assets/icons/right.svg );
+            }
+            background-position: right;
+            background-position: 97% center;
+            background-size: 5%;
         }
     }
 }
