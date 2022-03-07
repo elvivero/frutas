@@ -1,0 +1,10 @@
+{% capture src %}{{ "/assets/video/" | append: include.src }}{% endcapture %}
+{% capture poster_src %}{{ "/assets/img/" | append: include.poster }}{% endcapture %}
+<video
+    autoplay
+    loop
+    muted
+    poster="{{ poster_src | relative_url }}"
+    >
+    <source src="{{ src | relative_url }}" />
+</video>

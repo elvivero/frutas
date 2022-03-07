@@ -2,7 +2,7 @@
 {% if jekyll.environment == "production" %}
 <img
   alt="{{ include.alt }}"
-  src="{{ src | absolute_url }}"
+  src="{{ src | relative_url }}"
   srcset="{{ src | absolute_url | thumbor_srcset }}"
   sizes="(min-width: 1420px) 1380px, calc(100vw - 40px)"
   {% imagesize src:props %}
