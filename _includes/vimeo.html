@@ -1,0 +1,14 @@
+{% assign width_float = include.width | times: 1.0 %}
+<div
+        class="embed-container"
+        style="padding-bottom: {{ include.height | divided_by: width_float | times: 100 | round: 2 }}%;"
+        >
+        <iframe
+                src="{{ include.src }}"
+                width="{{ include.width }}"
+                height="{{ include.height }}"
+                frameborder="0"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowfullscreen
+                ></iframe>
+</div>
