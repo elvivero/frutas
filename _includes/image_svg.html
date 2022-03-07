@@ -1,0 +1,8 @@
+{% capture src %}{{ "/assets/img/" | append: include.file }}{% endcapture %}
+<img
+  src="{{ src | relative_url }}"
+  alt="{{ include.alt }}"
+  width="{{ include.width }}"
+  height="{{ include.height }}"
+  {% if include.lazy %}loading="lazy"{% endif %}
+  />
