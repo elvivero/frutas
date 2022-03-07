@@ -7,6 +7,7 @@ module Jekyll
       config = Jekyll.sites.first.config['thumbor']
 
       image = Thumbor::Cascade.new(config['key'], url)
+      image.no_upscale_filter()
 
       result = []
       config["sizes"].each do |size|

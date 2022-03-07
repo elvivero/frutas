@@ -36,7 +36,7 @@
     '';
     serve-prod = pkgs.writeShellScriptBin "serve-prod" ''
       export PATH="${pkgs.nodejs}/bin:$PATH"
-      JEKYLL_ENV=production ${pkgs.jekyll_env}/bin/bundle exec jekyll serve --watch --incremental --livereload
+      JEKYLL_ENV=production ${pkgs.jekyll_env}/bin/jekyll serve --watch --incremental --livereload
     '';
     push = pkgs.writeShellScriptBin "push" ''
       export PATH="${pkgs.nodejs}/bin:$PATH"
