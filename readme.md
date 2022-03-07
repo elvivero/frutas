@@ -2,9 +2,7 @@
 
 ## To do
 
-- Carousel: flechas
-- Video etiqutas
-- Logos 
+- Placeholders para videos vimeo
 
 ## Update dependencies (gems)
 
