@@ -22,6 +22,9 @@ a:hover {
     background-color: $color-primary;
 }
 
+b, strong { font-weight: bold; }
+em { font-style: italic; }
+
 button {
     border: none;
     background: none;
