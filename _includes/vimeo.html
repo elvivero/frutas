@@ -1,6 +1,9 @@
 {% assign width_float = include.width | times: 1.0 %}
 <div
         class="embed-container"
+        {% if include.id %}
+        id="{{ include.id }}"
+        {% endif %}
         style="padding-bottom: {{ include.height | divided_by: width_float | times: 100 | round: 2 }}%;"
         >
         <iframe
