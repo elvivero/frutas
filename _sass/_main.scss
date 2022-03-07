@@ -44,6 +44,7 @@ em {
 header {
     position:sticky;
     top: 0;
+    z-index: 100;
 
     @include mx-auto;
     background: $color-bg;
