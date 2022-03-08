@@ -56,7 +56,7 @@ header {
             padding: 0;
             display: flex;
             flex-direction: row;
-            column-gap: $s2;
+            gap: $s2;
             & > li > * {
                 margin: 0px;
                 font-weight: normal;
