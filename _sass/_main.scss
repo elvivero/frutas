@@ -151,6 +151,6 @@ main {
 .cols-2, .cols-3, .cols-4 {
    @media screen and (max-width: $sm) {
     grid-template-columns: 1fr;
-    gap:0;
+    gap: 0;
    }
 }
