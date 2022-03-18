@@ -1,6 +1,10 @@
-title: "Frutas de diseño"
-author: "El vivero"
-description: ""
+title: Frutas de diseño
+author: El vivero
+description: >
+  Frutas de diseño presenta una selección de marcas de frutas, con foco en los
+  diseños creados en España desde finales de los años 50 del siglo XX. Unos
+  diseños populares que llevan años a nuestro alrededor y que se han ido
+  actualizando casi inadvertidamente.
 url: "https://elvivero.es"
 baseurl: "/frutas"
 lang: "es"
