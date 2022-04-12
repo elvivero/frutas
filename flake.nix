@@ -6,17 +6,17 @@
 
   outputs = { self, nixpkgs, utils }: {
     overlay = final: prev: {
-      jekyll_env = final.callPackage ({ bundlerEnv, ruby }: bundlerEnv {
-        name = "jekyll_env";
+      elvivero-frutas-env = final.callPackage ({ bundlerEnv, ruby }: bundlerEnv {
+        name = "elvivero-frutas-env";
         inherit ruby;
         gemfile = ./Gemfile;
         lockfile = ./Gemfile.lock;
         gemset = ./gemset.nix;
       }) {};
-      website = final.callPackage ({ stdenv, jekyll_env, bundler, ruby, nodejs }: stdenv.mkDerivation {
+      elvivero-frutas-web = final.callPackage ({ stdenv, elvivero-frutas-env, bundler, ruby, nodejs }: stdenv.mkDerivation {
         name = "frutas-de-diseno";
         src = ./.;
-        buildInputs = [ jekyll_env bundler ruby nodejs ];
+        buildInputs = [ elvivero-frutas-env bundler ruby nodejs ];
         buildPhase = ''
 	      JEKYLL_ENV=production jekyll build
         '';
@@ -30,45 +30,35 @@
   } // utils.lib.eachDefaultSystem (system:
   let
     pkgs = import nixpkgs { inherit system; overlays = [self.overlay]; }; 
-    serve = pkgs.writeShellScriptBin "serve" ''
-      export PATH="${pkgs.nodejs}/bin:$PATH"
-      ${pkgs.jekyll_env}/bin/bundle exec jekyll serve --watch --incremental --livereload
-    '';
-    serve-prod = pkgs.writeShellScriptBin "serve-prod" ''
-      export PATH="${pkgs.nodejs}/bin:$PATH"
-      JEKYLL_ENV=production ${pkgs.jekyll_env}/bin/jekyll serve --watch --incremental --livereload
-    '';
-    push = pkgs.writeShellScriptBin "push" ''
-      export PATH="${pkgs.nodejs}/bin:$PATH"
-      ${pkgs.rsync}/bin/rsync -aPv ${pkgs.website}/www/ lambda:/var/www/elvivero.es/frutas
-    '';
-  in
-  rec {
-    packages.website = pkgs.website;
-    packages.jekyll_env = pkgs.jekyll_env;
-    defaultPackage = packages.website;
-
-    apps.serve = {
+    mkAppScript = name: script: {
       type = "app";
-      program = "${serve}/bin/serve";
+      program = "${pkgs.writeShellScriptBin name script}/bin/${name}";
     };
+  in rec {
+    packages.elvivero-frutas-web = pkgs.elvivero-frutas-web;
+    packages.elvivero-frutas-env = pkgs.elvivero-frutas-env;
+    defaultPackage = packages.elvivero-frutas-web;
 
-    apps.serve-prod = {
-      type = "app";
-      program = "${serve-prod}/bin/serve-prod";
-    };
+    apps.serve = mkAppScript "serve" ''
+      export PATH="${pkgs.nodejs}/bin:$PATH"
+      ${pkgs.elvivero-frutas-env}/bin/bundle exec jekyll serve --watch --incremental --livereload
+    '';
 
-    apps.push = {
-      type = "app";
-      program = "${push}/bin/push";
-    };
+    apps.serve-prod = mkAppScript "serve-prod" ''
+      export PATH="${pkgs.nodejs}/bin:$PATH"
+      JEKYLL_ENV=production ${pkgs.elvivero-frutas-env}/bin/jekyll serve --watch --incremental --livereload
+    '';
+
+    apps.push = mkAppScript "push" ''
+      export PATH="${pkgs.nodejs}/bin:$PATH"
+      ${pkgs.rsync}/bin/rsync -aPv ${pkgs.elvivero-frutas-web}/www/ lambda:/var/www/elvivero.es/frutas
+    '';
 
     defaultApp = apps.serve;
 
     devShell = pkgs.mkShell {
-      nativeBuildInputs = with pkgs; [ jekyll_env bundler ruby nodejs ];
-      shellHook = ''
-      '';
+      nativeBuildInputs = with pkgs; [ elvivero-frutas-env bundler ruby nodejs ];
+      # shellHook = '' '';
     };
   });
 }
