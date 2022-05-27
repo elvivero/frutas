@@ -24,5 +24,4 @@ window.addEventListener("DOMContentLoaded", (_event) => {
       .querySelector("button.next")
       .addEventListener("click", () => showSlide(carousels[id] + 1));
   });
-  console.log(carousels);
 });
