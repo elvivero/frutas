@@ -1,0 +1,183 @@
+---
+layout: default
+title: "Frutas de diseño"
+description: >
+  Frutas de diseño presenta una selección de marcas de frutas, con foco en los
+  diseños creados en España desde finales de los años 50 del siglo XX. Unos
+  diseños populares que llevan años a nuestro alrededor y que se han ido
+  actualizando casi inadvertidamente.
+carousel:
+  - Frutas de diseno16.jpg 
+  - Frutas de diseno17.jpg 
+  - Frutas de diseno18.jpg 
+  - Frutas de diseno19.jpg 
+  - Frutas de diseno20.jpg 
+  - Frutas de diseno21.jpg 
+style: >
+  ul.logos { display:flex; justify-content: space-between; gap: 2rem;}
+  ul.logos li { max-width: 350px; line-height: 3rem;}
+  @media (max-width: 1024px) {
+    ul.logos { flex-direction: column; gap: 0; margin-top: -4rem;}
+  }
+  #c1 {
+     width: 100%;
+     height: 250px;
+     overflow: hidden;
+  }
+  #c1 .embed-container{
+     padding-bottom: 0 !important;
+     width: 1600px;
+     height: 251px;
+     max-width: initial !important;
+  }
+---
+
+<h2 class="project-title" >FRUTAS DE DISEÑO</h2>
+
+<section >
+<div class="grid cols-2" style="margin-bottom:1rem;">
+    <div>
+        <p><em>Frutas de diseño</em> presenta una selección de marcas de
+        frutas, con foco en los diseños creados en España desde finales de los
+        años 50 del siglo XX. Unos diseños populares que llevan años a nuestro
+        alrededor y que se han ido actualizando casi inadvertidamente.</p>
+        <p>Desde la reactivación económica del final de la posguerra se genera
+        un cambio de estilo respecto a las creaciones del inicio del siglo
+        pasado, estimulado por la renovación de las técnicas de impresión.
+        Si antes la imagen de la fruta se apoyaba en ilustraciones de artistas,
+        ahora prevalece la gráfica, con diseños centrados en la tipografía y
+        basados en colores planos y llamativos, alrededor de marcas con nombres
+        sorprendentes.</p>
+        <p><em>Frutas de diseño</em> incluye mas de 250 papeles de seda, 120
+        cajas y 360 etiquetas. Es la selección de un volumen cuatro veces mayor
+        y no pretende ser completa o definitiva, sino un archivo abierto que
+        reúne muestras recogidas durante años en fruterías de barrio, a los que
+        se han sumado ejemplares provenientes de coleccionistas, visitas
+        a mercados centrales, imprentas, fábricas de cajas y comercializadoras
+        de frutas.</p>
+    </div>
+    <div>
+        <p>El uso de marcas comerciales y la costumbre de envolver las frutas se
+        mantienen desde hace más de 100 años. Una gran parte de las marcas surge
+        en empresas familiares que han nombrado sus productos con libertad y
+        cercanía. Muchas vienen de la época de oro de la exportación de
+        cítricos, entre 1920 y 1930. Hoy en día, algunas marcas siguen en manos
+        de las familias, mientras otras han pasado a empresas comercializadoras
+        que llevan varias marcas y calidades de frutas. Cada empresa, pequeña o
+        gran comercializadora, ha nombrado y diseñado sus marcas con el objetivo
+        de llamar la atención y destacar entre muchas otras. Hacerse visible ha
+        sido la inspiración y el estímulo a la imaginación.</p>
+        <ul style="font-weight: 500;">
+            <li><a href="https://www.instagram.com/elviverodesign/">Instagram El vivero</a></li>
+            <li><a href="{{"/assets/files/Frutas de diseno.pdf" | relative_url }}" target="_blank">Hoja de sala</a></li>
+            <li><a href="{{"/assets/files/Resumen Prensa Frutas de diseno 2022-05-25.pdf" | relative_url}}" target="_blank">Resumen de prensa</a></li>
+        </ul>
+    </div>
+  </div>
+    <h3>Exposición en CentroCentro, Madrid<h3>
+    {% include carousel.html images=page.carousel alt="Exposición Frutas de diseño en CentroCentro, Madrid" %}
+</section>
+
+<section>
+    <h3>Papeles de seda<h3>
+    <div class="grid cols-4">
+        {% include image.html file="Frutas de diseno01.jpg" alt="Papel de seda Joytom" %}
+        {% include image.html file="Frutas de diseno02.jpg" alt="Papel de seda Filósofo" %}
+        {% include image.html file="Frutas de diseno03.jpg" alt="Papel de seda Museo" %}
+        {% include image.html file="Frutas de diseno04.jpg" alt="Papel de seda Solita" %}
+        {% include image.html file="Frutas de diseno05.jpg" alt="Papel de seda Pirulí" lazy=true %}
+        {% include image.html file="Frutas de diseno06.jpg" alt="Papel de seda Domadora" lazy=true %}
+        {% include image.html file="Frutas de diseno07.jpg" alt="Papel de seda La deseada" lazy=true %}
+        {% include image.html file="Frutas de diseno08.jpg" alt="Papel de seda Etiqueta negra" lazy=true %}
+    </div>
+</section>
+
+<section>
+    <h3>Etiquetas de frutas</h3>
+    <div id="c1">
+    {% include vimeo.html src="https://player.vimeo.com/video/685541599?h=7d98009fda&background=1" id="etiquetas-container" width=1600 height=251 %}
+    </div>
+</section>
+
+<section>
+    <h3>Tablillas de madera de cajas de frutas<h3>
+    {% include image.html file="Frutas de diseno09.jpg" alt="Tablilla de madera Filosofo" lazy=true %}
+    {% include image.html file="Frutas de diseno10.jpg" alt="Tablilla de madera Serena" lazy=true %}
+    {% include image.html file="Frutas de diseno11.jpg" alt="Tablilla de madera Bru-Bru" lazy=true %}
+    {% include image.html file="Frutas de diseno12.jpg" alt="Tablilla de madera 555555555" lazy=true %}
+    {% include image.html file="Frutas de diseno13.jpg" alt="Tablilla de madera Eximia" lazy=true %}
+    {% include image.html file="Frutas de diseno14.jpg" alt="Tablilla de madera Elle et lui" lazy=true %}
+    {% include image.html file="Frutas de diseno15.jpg" alt="Tablilla de madera Mon Cheri" lazy=true %}
+</section>
+
+
+<section>
+</section>
+
+<section>
+  <h3>Videos</h3>
+  <div class="grid cols-2">
+  {% include vimeo.html src="https://player.vimeo.com/video/683899531?h=67bbf561ad" width=640 height=360 %}
+  {% include vimeo.html src="https://player.vimeo.com/video/709181324?h=15fc7b19d7&app_id=58479" width=16 height=9 %}
+  </div>
+</section>
+
+<section class="grid cols-2">
+    <div>
+        <h3>
+        Una exposición sobre la gráfica de las frutas</br>
+        <em>CentroCentro</em>, Madrid. 10 febrero-15 mayo 2022
+        </h3>
+        <ul>
+            <li>Diseño y comisariado: Florencia Grassi y Leandro Lattes, El vivero</li>
+            <li>Coordinación y producción: <a target="_blank" href="https://www.centrocentro.org/exposicion/frutas-de-diseno">CentroCentro</a></li>
+            <li>Montaje: <a target="_blank" href="http://artecexposiciones.es/">Artec Exposiciones</a></li>
+            <li>Fotografía de la exposición: Lukasz Michalak</li>
+            <li>Papeles de seda y etiquetas adhesivas: ejemplares de El vivero
+                y cortesía de
+                <a target="_blank" href="https://etiquetasdenaranjasam.blogspot.com/">Alfredo Masip</a>,
+                <a target="_blank" href="https://fi.pinterest.com/naranjadepapel/">Carles Iranzo</a>,
+                <a target="_blank" href="http://www.etiquetasdefrutas.es">Miguel Sánchez</a>,
+                <a target="_blank" href="http://www.nebotlucas.com/">Nebot Lucas</a>,
+                <a target="_blank" href="http://naranjassamel.com">Naranjas Samel</a> y
+                <a target="_blank" href="https://www.naranjastorres.com/" >Naranjas Torres</a>.
+            </li>
+            <li>Etiquetas naranjeras, cortesía de: Tomás Viana; y de
+                <a target="_blank" href="https://etiquetasdenaranjasam.blogspot.com/">Alfredo Masip</a>,
+                <a target="_blank" href="https://fi.pinterest.com/naranjadepapel/">Carles Iranzo</a> y
+                <a target="_blank" href="http://www.etiquetasdefrutas.es">Miguel Sánchez</a>.
+            </li>
+            <li>Clichés de flexografía, cortesía de: <a href="http://www.timbrado.es/">Timbrado Burrianense</a>.</li>
+            <li>Tablillas y cajas, cortesía de:
+                <a target="_blank" href="http://envasesfenollosa.com">Envases Fenollosa</a>;
+                <a target="_blank" href="https://fedemco.com/">Federación española del envase de madera y sus componentes, FEDEMCO</a>;
+                <a target="_blank" href="https://www.mercamadrid.es/">Mercamadrid</a>,
+                <a target="_blank" href="https://www.mercavalencia.es/">Mercavalencia</a>, y fruterías de barrio.
+            </li>
+        </ul>
+    </div>
+    <div>
+        <p>Agradecemos el apoyo y entusiasmo de:</br>
+        María Conde, Sergio España y María Luz Fitzsimons; de los coleccionistas:
+        Alfredo Masip, Carles Iranzo, Miguel Sánchez y Tomás Viana; de Alberto
+        Palmí, Federación Española de envases de madera y sus componentes,
+        FEDEMCO; de Alberto Marco Granell, Gustavo Sales Traver, y Laura
+        Alamilla, Timbrado Burrieanense; de Vicente Fenollosa, Envases
+        Fenollosa; de Pascual Nebot Lucas, Mayte Nebot Lucas y Maria Ángeles
+        Masia Burdeus, Nebot Lucas; de Rosa Torrico Martinez, Naranjas Samel; de
+        Luis de Antonio Murillo, Grupo García Ballester; de Ángeles Hernández y
+        Noelia Cubells Sanía, Mercavalencia; de Paloma de la Riva Amez y Melanie
+        González Vivero, Mercamadrid.</p>
+        <br />
+    </div>
+</section>
+
+<section>
+    <ul class="logos">
+        <li><br>{% include image_svg.html file="logos/centrocentro.svg" alt="Logotipo CentroCentro" %}</li>
+        <li>Exposición coproducida con:<br/>
+        {% include image_svg.html file="logos/cccc.svg" alt="Logotipo CCCC" %}</li>
+        <li>Programación oficial de:<br/>
+        {% include image_svg.html file="logos/wdcv22_mdf22.svg" alt="Logotipos World Design Capital Valencia 2022 y Madrid Design Festival" %}</li>
+    </ul>
+</section>
