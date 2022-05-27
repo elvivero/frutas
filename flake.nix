@@ -26,7 +26,7 @@
     apps = jekyllApps // {
       push = mkAppScript "push" ''
         export PATH="${pkgs.nodejs}/bin:$PATH"
-        ${pkgs.rsync}/bin/rsync -aPv ${pkgs.elvivero-frutas-web}/www/ lambda:/var/www/elvivero.es/frutas
+        ${pkgs.rsync}/bin/rsync -aPv ${packages.elvivero-frutas}/www/ lambda:/var/www/elvivero.es/frutas
       '';
     };
     defaultApp = apps.serve;
