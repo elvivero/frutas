@@ -6,13 +6,22 @@ description: >
   diseños creados en España desde finales de los años 50 del siglo XX. Unos
   diseños populares que llevan años a nuestro alrededor y que se han ido
   actualizando casi inadvertidamente.
-carousel:
+carousel: true
+carousel1:
   - Frutas de diseno16.jpg 
   - Frutas de diseno17.jpg 
   - Frutas de diseno18.jpg 
   - Frutas de diseno19.jpg 
   - Frutas de diseno20.jpg 
   - Frutas de diseno21.jpg 
+carousel2:
+  - Frutas de diseno CCCC 01.jpg
+  - Frutas de diseno CCCC 02.jpg
+  - Frutas de diseno CCCC 03.jpg
+  - Frutas de diseno CCCC 04.jpg
+  - Frutas de diseno CCCC 05.jpg
+  - Frutas de diseno CCCC 06.jpg
+  - Frutas de diseno CCCC 07.jpg
 style: >
   ul.logos { display:flex; justify-content: space-between; gap: 2rem;}
   ul.logos li { max-width: 350px; line-height: 3rem;}
@@ -75,7 +84,8 @@ style: >
     </div>
   </div>
     <h3>Exposición en CentroCentro, Madrid<h3>
-    {% include carousel.html images=page.carousel alt="Exposición Frutas de diseño en CentroCentro, Madrid" %}
+    {% include carousel.html images=page.carousel1 alt="Exposición Frutas de diseño en CentroCentro, Madrid" %}
+    {% include carousel.html images=page.carousel2 alt="Exposición Frutas de diseño en Centre del Carmen, Valencia" %}
 </section>
 
 <section>
