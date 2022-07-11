@@ -2,7 +2,7 @@
 
 html {
     font-family: 'Inter', sans-serif;
-    font-size: 130%;
+    font-size: 20px;
     margin:0;
     padding:0;
 }
@@ -73,6 +73,7 @@ main {
     background: $color-bg;
     max-width: $container-width;
     padding: 0 $s4;
+    margin-top: 50px;
     p {
         font-size: $font-base;
         margin-top: 0;
