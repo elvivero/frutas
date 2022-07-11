@@ -6,15 +6,26 @@ window.addEventListener("DOMContentLoaded", (_event) => {
     const n = slides.length;
     carousels.push(0);
 
-    const indicator = carousel.querySelector(".indicator .current");
+
+    const indicators = carousel.querySelectorAll("div.indicators span");
 
     const showSlide = (slide_n) => {
       slide_n = ((slide_n % n) + n) % n; // positive modulo
       slides[carousels[id]].classList.remove("active");
       slides[slide_n].classList.add("active");
       carousels[id] = slide_n;
-      indicator.innerHTML = carousels[id] + 1;
+      [...indicators].forEach((indicator, id) => {
+          if (id == slide_n) indicators[id].classList.add("current")
+          else indicators[id].classList.remove("current")
+      })
+      
     };
+
+    [...indicators].forEach((indicator, id) => {
+        indicator.onclick = () => {
+            showSlide(id);
+        }
+    })
 
     carousel
       .querySelector("button.prev")
@@ -23,5 +34,6 @@ window.addEventListener("DOMContentLoaded", (_event) => {
     carousel
       .querySelector("button.next")
       .addEventListener("click", () => showSlide(carousels[id] + 1));
+
   });
 });

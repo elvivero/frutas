@@ -12,6 +12,13 @@
         {% endif %}
         {% endfor %}
     </div>
-    <button class="prev"></button>
-    <button class="next"></button>
+    <div class="controls">
+      <button class="prev"></button>
+      <button class="next"></button>
+    </div>
+    <div class="indicators">
+       {% for img in include.images %}
+       <span {% if forloop.index == 1 %}class="current"{% endif %}></span>
+        {% endfor %}
+    </div>
 </div>

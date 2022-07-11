@@ -17,12 +17,12 @@
         }
     }
 
-    button {
+    .controls > button {
         display: none;
         cursor:pointer;
         position: absolute;
         top:0;
-        height: 100%;
+        height: calc(100% - 2em);
         width: 47%;
         background-repeat: no-repeat;
         @media screen and (min-width: $lg) {
@@ -30,20 +30,44 @@
         }
         &.prev {
             left:0;
-            &:hover{
-            background-image: url( /frutas/assets/icons/left.svg );
-        }
+            // &:hover{
+            //     background-image: url( /frutas/assets/icons/left.svg );
+            // }
             background-position: 3% center;
             background-size: 5%;
         }
         &.next {
             right:0;
-            &:hover{
-            background-image: url( /frutas/assets/icons/right.svg );
-            }
+            // &:hover{
+            //     background-image: url( /frutas/assets/icons/right.svg );
+            // }
             background-position: right;
             background-position: 97% center;
             background-size: 5%;
+        }
+    }
+
+    &> .indicators {
+        text-align: center;
+        margin-top: .7rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media screen and (max-width: $lg) {
+            display: none;
+        }
+        span {
+            cursor: pointer;
+            vertical-align: center;
+            display: inline-block;
+            margin: 0 $s1;
+            background: gray;
+            width: 40px;
+            height: 2px;
+        }
+        span.current, span:hover {
+            background: black;
+            height: 5px;
         }
     }
 }
