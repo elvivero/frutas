@@ -15,8 +15,8 @@ carousel1:
   - Frutas de diseno20.jpg 
   - Frutas de diseno21.jpg 
 carousel2:
-  - Frutas de diseno CCCC 01.jpg
   - Frutas de diseno CCCC 02.jpg
+  - Frutas de diseno CCCC 01.jpg
   - Frutas de diseno CCCC 03.jpg
   - Frutas de diseno CCCC 04.jpg
   - Frutas de diseno CCCC 05.jpg
@@ -80,7 +80,7 @@ style: >
         <ul style="font-weight: 500;">
             <li><a href="https://www.instagram.com/elviverodesign/">Instagram El vivero</a></li>
             <li><a href="{{"/assets/files/Frutas de diseno.pdf" | relative_url }}" target="_blank">Hoja de sala</a></li>
-            <li><a href="{{"/assets/files/Resumen Prensa Frutas de diseno 2022-06-30.pdf" | relative_url}}" target="_blank">Resumen de prensa</a></li>
+            <li><a href="{{"/assets/files/Resumen Prensa Frutas de diseno 2022-11-11.pdf" | relative_url}}" target="_blank">Resumen de prensa</a></li>
         </ul>
     </div>
   </div>
@@ -130,8 +130,14 @@ style: >
 
 <section>
   <div class="grid cols-2">
-    {% include vimeo.html src="https://player.vimeo.com/video/683899531?h=67bbf561ad" width=640 height=360 %}
-    {% include vimeo.html src="https://player.vimeo.com/video/709181324?h=15fc7b19d7&app_id=58479" width=16 height=9 %}
+    <div>
+        <h3>Vídeo de la exposición (extracto)<h3>
+        {% include vimeo.html src="https://player.vimeo.com/video/683899531?h=67bbf561ad&autoplay=1" width=640 height=360 %}
+    </div>
+    <div>
+        <h3>Presencia en mobiliario urbano de Madrid<h3>
+        {% include vimeo.html src="https://player.vimeo.com/video/709181324?h=15fc7b19d7&app_id=58479&autoplay=1" width=16 height=9 %}
+    </div>
   </div>
 </section>
 
